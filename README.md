@@ -2,7 +2,7 @@
 
 JavaScript testing exercises for [The Odin Project Testing Practice](https://www.theodinproject.com/lessons/node-path-javascript-testing-practice), using Jest and Babel.
 
-Phases 1 and 2 are complete: the testing environment, `capitalize`, and `reverseString` are implemented and tested.
+Phases 1–3 are complete: the testing environment, `capitalize`, `reverseString`, and `calculator` are implemented and tested.
 
 ## Setup
 
@@ -33,7 +33,7 @@ Use ES6 `import` and `export` in JavaScript files. Following [Testing Basics](ht
 
 1. npm, Jest, Babel, ignore rules, and test scripts (complete)
 2. `capitalize` and `reverseString` (complete)
-3. `calculator`: `add`, `subtract`, `divide`, and `multiply`
+3. `calculator`: `add`, `subtract`, `divide`, and `multiply` (complete)
 4. `caesarCipher`
 5. `analyzeArray` and final review
 
