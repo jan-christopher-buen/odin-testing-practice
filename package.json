@@ -1,0 +1,17 @@
+{
+  "name": "odin-testing-practice",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JavaScript testing exercises for The Odin Project using Jest and Babel.",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "babel-jest": "^30.5.2",
+    "jest": "^30.5.2"
+  }
+}
