@@ -2,7 +2,7 @@
 
 JavaScript testing exercises for [The Odin Project Testing Practice](https://www.theodinproject.com/lessons/node-path-javascript-testing-practice), using Jest and Babel.
 
-Phase 1 is complete: the testing environment is configured. Exercise functions and tests have not been added yet.
+Phases 1 and 2 are complete: the testing environment, `capitalize`, and `reverseString` are implemented and tested.
 
 ## Setup
 
@@ -24,7 +24,6 @@ npm run test:watch
 ```
 
 `npm test` runs Jest once. The watch command reruns tests related to changed files.
-Until exercise tests are added, Jest reports "No tests found" and exits with code 1.
 
 ## ES modules
 
@@ -33,7 +32,7 @@ Use ES6 `import` and `export` in JavaScript files. Following [Testing Basics](ht
 ## Planned phases
 
 1. npm, Jest, Babel, ignore rules, and test scripts (complete)
-2. `capitalize` and `reverseString`
+2. `capitalize` and `reverseString` (complete)
 3. `calculator`: `add`, `subtract`, `divide`, and `multiply`
 4. `caesarCipher`
 5. `analyzeArray` and final review
