@@ -2,7 +2,7 @@
 
 JavaScript testing exercises for [The Odin Project Testing Practice](https://www.theodinproject.com/lessons/node-path-javascript-testing-practice), using Jest and Babel.
 
-All five phases are complete. The five exercise modules in `src/` have 39 passing tests across five test suites.
+The five exercise modules in `src/` are covered by 39 tests across five test suites.
 
 ## Setup
 
@@ -13,8 +13,6 @@ npm ci
 ```
 
 The setup was verified with Node.js 24.22.0 and npm 11.19.1.
-
-The Phase 1 dependency audit reported 19 moderate findings in the Jest dependency tree, originating from `sprintf-js`. npm's suggested fix changes Jest and `babel-jest` to version 25; that downgrade has not been applied.
 
 ## Test commands
 
@@ -28,14 +26,6 @@ npm run test:watch
 ## ES modules
 
 Use ES6 `import` and `export` in JavaScript files. Following [Testing Basics](https://www.theodinproject.com/lessons/node-path-javascript-testing-basics#using-es6-import-statements-with-jest), Babel 7 uses `@babel/preset-env` with the current Node.js version as its target. Jest uses `babel-jest` to transform modules to CommonJS in memory before running tests.
-
-## Completed phases
-
-1. npm, Jest, Babel, ignore rules, and test scripts (complete)
-2. `capitalize` and `reverseString` (complete)
-3. `calculator`: `add`, `subtract`, `divide`, and `multiply` (complete)
-4. `caesarCipher` (complete)
-5. `analyzeArray` and final review (complete)
 
 ## Behavior and examples
 
@@ -56,17 +46,17 @@ analyzeArray([1, 8, 3, 4, 2, 6]);
 // { average: 4, min: 1, max: 8, length: 6 }
 ```
 
-The tested cipher shifts are non-negative integers, including zero and values greater than 26. Negative or fractional shifts, invalid inputs, empty arrays, and division by zero have no additional project requirements or custom validation. Agree on their expected behavior before adding tests or special handling.
+The tested cipher shifts are non-negative integers, including zero and values greater than 26. Negative or fractional shifts, invalid inputs, empty arrays, and division by zero have no additional project requirements or custom validation.
 
-## Test-first workflow
+## Testing approach
 
-Tests were written before implementing each exercise. Empty exported functions first produced the expected failures because they returned `undefined`; the implementations then made the tests pass. Refactor reviews kept the solutions simple, with a cipher cleanup replacing numeric character codes with readable letter references.
+The exercises use a test-first workflow: define the expected behavior, implement
+the function, then refactor while keeping the tests passing. Tests check public
+return values, including the assignment's three cipher examples and array
+analysis example.
 
-| Phase | Red result for new tests | Green result for all tests |
-| --- | --- | --- |
-| 2: String functions | 8 failed | 8 passed |
-| 3: Calculator | 16 failed | 24 passed |
-| 4: Caesar cipher | 10 failed | 34 passed |
-| 5: Array analysis | 5 failed | 39 passed |
+## Dependency maintenance
 
-Tests check public return values, including the assignment's three required cipher examples and array analysis example. No private helpers are tested.
+An earlier dependency audit reported findings in the Jest development toolchain
+through `sprintf-js`. Run `npm audit` to check the installed dependency tree
+before updating tools; historical audit counts are not a current security report.
